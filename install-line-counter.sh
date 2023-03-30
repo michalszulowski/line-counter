@@ -10,12 +10,13 @@ LINE_COUNTER_LOCATION="/usr/local/src/"
 LINE_COUNTER_REPO="https://github.com/michalszulowski/line-counter"
 
 # install script files
-mkdir $LINE_COUNTER_LOCATION
 cd $LINE_COUNTER_LOCATION
 
+rm -rf "${LINE_COUNTER_LOCATION}line-counter"
 git clone $LINE_COUNTER_REPO
 
 # add bash command
 cd line-counter
+rm -rf /usr/bin/count-lines
 mv count-lines.sh /usr/bin/count-lines
 chmod u+x /usr/bin/count-lines

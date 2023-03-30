@@ -1,8 +1,9 @@
 import os
 import sys
 
-excluded_words_path = 'excluded_words.txt'
-extensions_path = 'extensions.txt'
+files_dir = '/usr/local/src/lines-counter/'
+excluded_words_path = files_dir + 'excluded_words.txt'
+extensions_path = files_dir + 'extensions.txt'
 
 
 def read_lines(path):
