@@ -17,5 +17,6 @@ wget https://github.com/michalszulowski/line-counter/blob/main/extensions.txt
 wget https://github.com/michalszulowski/line-counter/blob/main/excluded_words.txt
 
 # add bash command
-cd /usr/bin/
-wget https://github.com/michalszulowski/line-counter/blob/main/count-lines
+wget https://github.com/michalszulowski/line-counter/blob/main/count-lines.sh
+mv count-lines.sh /usr/bin/count-lines
+chmod u+x /usr/bin/count-lines
