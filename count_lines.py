@@ -1,7 +1,7 @@
 import os
 import sys
 
-files_dir = '/usr/local/src/lines-counter/'
+files_dir = '/usr/local/src/line-counter/'
 excluded_words_path = files_dir + 'excluded_words.txt'
 extensions_path = files_dir + 'extensions.txt'
 
