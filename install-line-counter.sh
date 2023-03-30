@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# verify if sudo
+if [ "$EUID" -ne 0 ]
+    then echo "The installer needs to be run as sudo."
+    exit
+fi
+
 LINE_COUNTER_SRC_DIR="/usr/local/src/line-counter/"
 
 # install script files
