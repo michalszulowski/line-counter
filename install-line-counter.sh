@@ -6,17 +6,16 @@ if [ "$EUID" -ne 0 ]
     exit
 fi
 
-LINE_COUNTER_SRC_DIR="/usr/local/src/line-counter/"
+LINE_COUNTER_LOCATION="/usr/local/src/"
+LINE_COUNTER_REPO="https://github.com/michalszulowski/line-counter"
 
 # install script files
-mkdir $LINE_COUNTER_SRC_DIR
-cd $LINE_COUNTER_SRC_DIR 
+mkdir $LINE_COUNTER_LOCATION
+cd $LINE_COUNTER_LOCATION
 
-wget https://github.com/michalszulowski/line-counter/blob/main/count_lines.py
-wget https://github.com/michalszulowski/line-counter/blob/main/extensions.txt
-wget https://github.com/michalszulowski/line-counter/blob/main/excluded_words.txt
+git clone $LINE_COUNTER_REPO
 
 # add bash command
-wget https://github.com/michalszulowski/line-counter/blob/main/count-lines.sh
+cd line-counter
 mv count-lines.sh /usr/bin/count-lines
 chmod u+x /usr/bin/count-lines
