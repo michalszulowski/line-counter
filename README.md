@@ -12,3 +12,6 @@ count_lines dir1 dir2 ...
 ```
 
 Put expected extensions in extensions.txt file. If you want to ignore files with certain words, put those words in excluded_words.txt. The configuration files are stored in /usr/local/src/line-counter.
+
+## TODO
+Add counting lines in github repositories
